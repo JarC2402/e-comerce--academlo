@@ -1,0 +1,70 @@
+.productos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.silla, .monitor, .microfono {
+    width: 8rem;
+    border: solid black;
+        
+    }
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.carIn {
+    display: flex;
+    justify-content: space-around;
+}
+
+* {
+    background-color: gray;
+}
+
+.bx-cart-download {
+    font-size: 30px;
+    color: brown;
+    border-right: 0px;
+}
+
+.windowCar {
+    width: 50%;
+    height: calc(100vh - 50px) ;
+    top: 50px;
+    position: fixed;
+    transform: translate(0); 
+    border: solid white; 
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+ 
+.windowCar__show {
+    transform: translate(-105%);   
+    
+    
+    }
+.bx-x {
+    display: block;
+    width: 20px;
+    align-self: flex-end;
+    font-size: 25px;
+}
+
+.itemArea {
+    height: 80%;
+    padding: 5px;
+}
+
+
+.resumeArea{ 
+   top: 1px;  
+   height: 20%;    
+}
+
+article {
+    border: solid black;
+}
