@@ -193,8 +193,7 @@ function printResume () {
         <h2>Hello World</h2>
         <p class="card_allItems">${totalamount} items</p>
         <p class="card_total">$ ${totalPrice}</p>
-        <input id="" type="button" class="btn btn-Checkout" value="Checkout" >
-        <input id="" type="button" class="btn btn-confirm" value="Confirm" >  
+        <input id="" type="button" class="btn btn-Checkout" value="Checkout" >         
         `
         resumeArea.innerHTML =  htmlResume;
 
@@ -208,8 +207,6 @@ function printResume () {
               let  ubicacion = itemsId.indexOf(testing[i]);
 
               items[ubicacion].stock =  (items[ubicacion].stock - amountArray[i]) 
-
-              
               printProductos();    
             }
         }
@@ -217,38 +214,28 @@ function printResume () {
 }
 
 printResume();
-
 resumeArea.addEventListener('click', (e) => {
-if (e.target.classList.contains('btn-confirm')) {
+    if (e.target.classList.contains('btn-Checkout')) {
+        const confirm = alert('gracias por su compra')
+    }
 
-     for (let i = 0; i < items.length; i++) {
-       let itemsId = (items[i].id)
-
-       const deleteCar = pushCar.filter(test => test.id != itemsId)        
-    pushCar = deleteCar;
-       } 
-}
-printItems();
-})
-
-resumeArea.addEventListener('click', (e) => {
-    if (e.target.classList.contains('btn-confirm')) {
+function laging (){
+setTimeout(() => {
+     if (confirm != true) {pushCar = []};
+     printItems();
+     if (confirm != true) {
         htmlResume = `
         <h2>Hello World</h2>
         <p class="card_allItems">0 items</p>
         <p class="card_total">$ 0</p>
-        <input id="" type="button" class="btn btn-Checkout" value="Checkout" >
-        <input id="" type="button" class="btn btn-confirm" value="Confirm" >  
-        `
+        <input id="" type="button" class="btn btn-Checkout" value="Checkout" >          `
         resumeArea.innerHTML =  htmlResume;
-
     }
-    })
-     
+}, 1000);
+}
 
-  
-
-
+laging();
+})
 
 /*
 
@@ -260,3 +247,33 @@ pass: dRtV!Ai4
 passs: 0$o1W=X4
 
 */
+// fetch le indica a nuestta funcion que estamos trabajando con asincronia y nos preparamos para crear una promesa
+// function consumirConFetch(){
+//     fetch('https://academlo-api-production.up.railway.app/api/products')
+//     .then(respuesta => respuesta.json())
+//     .then((json) => {console.log(json)})
+//     .catch((error) => {
+//         console.log(error);
+//     })
+//     .finally(()=> {
+//         console.log('proceso terminado')
+//     })
+
+// }
+
+// consumirConFetch();
+
+
+// async function obtenerPosts(){
+//     try {
+//         const respuesta = await fetch(
+//             ('https://academlo-api-production.up.railway.app/api/products0')
+//         );
+//         const json = await respuesta.json()
+//         console.log(json);
+//     } catch (error){
+//         console.log(error);
+//     }
+// }
+
+// obtenerPosts();

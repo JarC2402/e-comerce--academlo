@@ -43,10 +43,9 @@
 
  
 .windowCar__show {
-    transform: translate(-105%);   
-    
-    
+    transform: translate(-105%);     
     }
+
 .bx-x {
     display: block;
     width: 20px;
