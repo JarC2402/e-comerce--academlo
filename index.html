@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="in">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +9,47 @@
     
 </head>
 <body>
+  <header class="header" id="header">
 <div class="navbar">
-  <i class='bx bx-cart-download'></i>
+  <div class="left"><i class='bx bxs-t-shirt'></i>
+  <h2>STORE</h2>
+  <div class="menuNavbar">
+  <a href="#home"><h3>Home</h3></a>
+  <a href="#products"><h3>Products</h3></a>
+  <a href="#info"><h3>Information</h3></a>
 </div>
-
-<div class="productos">
-  <div class="monitor">
-     <h2>Monitor </h2> 
-    <input class="addToCar" type="button" id="1" value="Agregar al carrito">
   </div>
-
-  <div class="silla">
-     <h2>silla </h2>
-    <input class="addToCar" type="button" id="2" value="Agregar al carrito">
-  </div>
-
-  <div class="microfono">
-     <h2>Microfono </h2>
-    <input class="addToCar" type="button" id="3" value="Agregar al carrito">
+  <div class="right">
+   <i class='bx bxs-moon' ></i>
+   <i class='bx bx-cart-download'></i>
+  <i class='bx bx-qr'></i>
   </div>
 </div>
+</header>
+<div id="home" class="first__product">
+  <div class="img">
+    <img src="img/featured1.png" alt="first shirt" class="firstShirt">
+  </div>
+  <div class="description">
+    <h2 class="title">New Sweatshirt</h2>
+    <h2 class="title">COLLECTIONS 2022</h2>
+    <p>
+      Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern
+      design.
+    </p>
+    <h3 class="price1">$99.00</h3>
+  </div>  
+</div>
 
+<section class="container_Product"><h2 class="titleProduc">ALL COLLETION</h2> 
+<div id="products" class="productos">  <!-- cambiar aca y en main a ingles   -->    
+</div>
+</section>
+<section class="menu menuShow">
+<a href="#home"><h2>Home</h2></a>
+<a href="#products"><h2>Products</h2></a>
+<a href="#info"><h2>Information</h2></a>
+</section>
 <section class="windowCar windowCar__show">
   <i class='bx bx-x'></i>
 <div>
@@ -42,7 +62,47 @@
 
 </section>
 
+
+
+</div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="main.js"></script>
 </body>
+<footer id="info" class="footContainer">
+  <div class="all_information">
+    <div class="information_adress" >
+      <h4>Our Adress</h4>
+    <p> toluca - Mexico</p>
+    </div>
+    <div class="information_about" >
+      <h4>About Us</h4>
+    <p> Support Center</p>
+    <p>Customer Suppport</p>
+    <p>About Us</p>
+    <p>Copy Right</p>
+    </div>
+  
+    <div class="information_protucts" >
+      <h4>Products</h4>
+    <p>Hoodies</p>
+    <p>Shirts</p>
+    <p>Sweatsshirts</p>
+    </div>
+  
+    <div class="information_social" >
+      <h4>Social</h4>
+    <div class="socialIcons">
+      <i class='bx bxl-twitter' ></i>
+      <i class='bx bxl-facebook' ></i>
+      <i class='bx bxl-instagram' ></i>
+    </div>    
+    </div>    
+  </div>
+  <div class="rigths">
+      <p>© ACADEMLO. All rigths reserved</p>
+     </div>
+  </footer>
+  
+  
 
 </html>

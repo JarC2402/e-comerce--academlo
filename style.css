@@ -1,13 +1,134 @@
-.productos {
-    display: flex;
-    justify-content: space-around;
+* {
+    box-sizing: border-box;
+    padding: 2px;
+    margin: 0;
 }
 
-.silla, .monitor, .microfono {
-    width: 8rem;
-    border: solid black;
-        
-    }
+body {
+    background-color: hsl(240deg 7% 97%);
+}
+
+.header {
+    margin-top: 0px;
+    position: fixed;  /*para crear el encabezado que matenga visible siempre, debes crar un contenedor y colocarle posicion fixe */
+    width: 93%;
+
+}
+
+.bx {
+    font-size: 20px;
+    color: black;
+    margin: 5px;
+}
+
+.navbar {
+    padding: 2px;
+    background-color: #e94959;
+    height: 45px;
+    display: flex;
+    position: sticky; /* despues de colocar en contenedor fixed debes colocar al contendor interno stiky y el margin top 0px es indispensable */
+    margin-top: 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: inline-flex;
+    align-items: center;  
+    margin-left: 1rem;  
+} /* con esto haces que los iconos queden alineados  */
+
+.right {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
+} /* con esto haces que los iconos queden alineados  */
+
+
+.img {
+    width: 200px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    justify-self: flex-end;
+    background-color: #e94959;
+}
+
+.firstShirt {
+    width: 250px;
+    height: 250px;    
+}
+
+.description {
+    padding: 10px;
+}
+
+.title {
+    font-size: 35px;
+}
+
+.price1 {
+    color: #e94959;
+    font-size: 20px;
+}
+
+.first-btn {    
+    display: inline-block; /*  */  
+    padding: 16px 24px;
+    text-align: center;
+    color: white;
+    width: 150px;
+    height: 50px;
+    padding-top: 3px;
+    background-color:hsl(0, 0%, 17%);
+    
+}
+
+.titleProduc {
+    font-size: 30px;
+    margin: 2rem;
+}
+
+.card_product {
+    display: inline-block;
+    background-color: white;
+    border-radius: 10%;
+    padding: 5px;
+    background-color: hsl(0, 0%, 90%);
+}
+
+
+.card_stockAndPrice {
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+} /* el display flex para colocarlo uno al lado del otro. y el align para que queden a la misma altura  */ 
+
+.addToCar {
+    margin-left: 6px;
+}
+
+.bx-message-square-add {
+    font-size: 35px;
+    display: inline-flex;
+    position: absolute;
+    margin-top: 8rem;
+    margin-left: -2rem;
+}
+
+.card_stock {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card_name {
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+
 
 .btn {
     display: flex;
@@ -19,51 +140,294 @@
     justify-content: space-around;
 }
 
-* {
-    background-color: gray;
-}
-
 .bx-cart-download {
     font-size: 30px;
-    color: brown;
     border-right: 0px;
 }
 
 .windowCar {
-    width: 50%;
-    height: calc(100vh - 50px) ;
+    width: 100%;
+    height: calc(100vh) ;
     top: 50px;
     position: fixed;
     transform: translate(0); 
-    border: solid white; 
+    background-color: white; 
     padding: 2rem;
     display: flex;
     flex-direction: column;
-}
+    text-align: center;
+    overflow-y: scroll;/* con esto agregas funcion de scroll a la ventana del carrito */  
+} 
 
- 
 .windowCar__show {
     transform: translate(-105%);     
     }
+
+.menu {    
+    width: 93%;
+    height: 30vh;
+    top: 50px;
+    position: fixed;
+    transform: translate(0); 
+    background-color: white; 
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    text-align: center;
+    border: solid #e94959;
+    border-bottom-left-radius: 20%;
+    border-end-end-radius: 20%;
+}
+
+.menuShow {
+    transform: translate(-105%);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
 
 .bx-x {
     display: block;
     width: 20px;
     align-self: flex-end;
-    font-size: 25px;
+    font-size: 30px;
+    margin-right: 2rem;
 }
 
 .itemArea {
     height: 80%;
     padding: 5px;
+   
+}
+
+
+.card_car {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.card_info {
+    flex-direction: column;
+    text-align: start;
+}
+
+.card_btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    height: 25px;
 }
 
 
 .resumeArea{ 
    top: 1px;  
-   height: 20%;    
+   height: 20rem;   
 }
 
-article {
-    border: solid black;
+.card_resume{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    font-size: 20px;
 }
+
+.btnSell{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-Checkout{
+    color: white;
+    width: 150px;
+    height: 50px;
+    padding-top: 3px;
+    background-color:hsl(0, 0%, 17%);
+}
+
+H4 {
+    font-size: 25px;
+}
+
+@media (min-width: 600px){ /* vista escritorio  */ 
+ 
+    .bx-qr {
+        display: none;
+    }
+
+    h3 {
+        margin-left: 2rem;
+        color: hsl(0, 0%, 90%);
+    }
+
+    .header {
+        width: 99%;
+        padding: 2px 10rem;
+    }
+
+    .first__product {
+        display: flex;
+        justify-content: center;       
+        width: 100%;
+        
+    }
+    .img {
+        width: 500px;
+        height: 650px;        
+    }
+    
+    .firstShirt {
+        width: 550px;
+        height: 550px;    
+    }
+
+    .description {
+        width: 50vh;
+        font-size: 30px;
+        padding: 10px;
+    }
+    
+    .title {
+        margin-top: 2rem;
+        font-size: 85px;
+    }
+    
+    .price1 {
+        color: #e94959;
+        font-size: 30px;
+    }
+    
+    .first-btn {         
+        width: 250px;
+        height: 50px;
+        padding-top: 3px;
+        font-size: 20px;        
+    }
+    
+    .container_Product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+    }
+    .titleProduc {
+        font-size: 50px;
+    }
+
+    .productos {
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+        margin: 2rem;
+    }
+    
+    .all_information {
+        display: flex;
+        justify-content: space-around;
+        
+        width: 60%;
+        margin-bottom: 3rem;
+    }
+
+    .footContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: hsl(0, 0%, 90%);
+    }
+
+    .card_product {
+        width: 20rem;
+        height: auto;
+        font-size: 25px;
+    }
+
+    .card_image {
+        width: 300px;
+        height: 280px;
+        border-radius: 10%;
+    }
+
+    .itemArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 25px;
+    }
+
+    .resumeArea:p {
+        font-size: 25px;
+    }
+   
+
+    .windowCar {
+        font-size: 25px;
+    }
+
+
+    .btn-Checkout{        
+        width: 150px;
+        height: 80px;
+        font-size: 20px;                
+    }
+
+    .card_allItems, .card_total{
+        font-size: 30px;
+    }
+    
+    .menuNavbar {
+        display: flex;
+    }
+ 
+}
+
+@media (max-width: 600px){ /* vista movile  */
+
+    .first__product {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 29rem;
+        padding: 0px;
+    }
+
+    .productos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 2rem;
+    }
+
+    .footContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+        height: 28rem;
+    }  
+    
+    .card_image {
+        width: 200px;
+        height: 180px;
+        border-radius: 10%;
+    }
+
+    .menuNavbar {
+        display: none;
+    }
+
+}
+
+
+
+/* consultas:
+- como hago para que en la vista movile se vea todo centrado
+- como centrar el texto dentro de un boton
+*/
